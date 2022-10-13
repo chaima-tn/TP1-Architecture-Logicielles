@@ -6,7 +6,7 @@ public class EncodingModuleClient
 {
     public static void main(String[] args) throws IOException
     {
-        EncodingModule encodingModule = new EncodingModule();
+        IEncodingModule encodingModule = new IEncodingModule();
         encodingModule.encodeWithFiles();
         encodingModule.encodeBasedOnNetworkAndDatabase();
     }

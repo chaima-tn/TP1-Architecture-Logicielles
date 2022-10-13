@@ -4,7 +4,7 @@ import java.util.TimerTask;
 
 public class Timer
 {
-    public void register(long timeOut, final Door door)
+    public void register(long timeout, final timeOut door)
     {
         java.util.Timer timerUtility = new java.util.Timer();
         timerUtility.schedule(new TimerTask()
@@ -14,6 +14,6 @@ public class Timer
             {
                 door.timeOutCallback();
             }
-        }, timeOut);
+        }, timeout);
     }
 }
