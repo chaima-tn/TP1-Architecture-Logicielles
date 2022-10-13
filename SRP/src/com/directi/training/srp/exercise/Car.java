@@ -1,30 +1,25 @@
 package com.directi.training.srp.exercise;
 
-public class Car
-{
-    private final String _id;
+public class Car extends Model implements Comparable<Car> {
     private final String _model;
     private final String _brand;
 
-    public Car(String id, String model, String brand)
-    {
-        _id = id;
+    public Car(String id, String model, String brand) {
+        super(id);
         _model = model;
         _brand = brand;
     }
 
-    public String getId()
-    {
-        return _id;
-    }
-
-    public String getModel()
-    {
+    public String getModel() {
         return _model;
     }
 
-    public String getBrand()
-    {
+    public String getBrand() {
         return _brand;
+    }
+
+    @Override
+    public int compareTo(Car other) {
+        return this.getModel().compareTo(other.getModel());
     }
 }
